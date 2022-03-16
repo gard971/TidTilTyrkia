@@ -45,7 +45,7 @@ client.on("ready", () => {
     } else {
         jobToday.setDate(jobToday.getDate() + 1)
         jobToday.setHours(12, 00)
-        var j = nodeSchedule.scheduleJob(jobToday(function () {
+        var j = nodeSchedule.scheduleJob(jobToday, (function () {
             var j = nodeSchedule.scheduleJob(jobToday, function () {
                 var channel = client.channels.cache.find(channel => channel.id === "953653632816001027")
                 var TyrkiaTid = new Date("05/28/2022")
