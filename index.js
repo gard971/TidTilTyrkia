@@ -55,6 +55,8 @@ client.on("ready", () => {
                 var daysLeft = diff / (1000 * 3600 * 24);
                 var timeLeft = new Date().setDate(today.getDate() + daysLeft)
                 channel.send(`Daily reminder om at det er ${days(daysLeft)}igjen til Tyrkia`)
+                var jobToday = new Date()
+                jobToday.setHours(12, 00)
                 jobToday.setDate(jobToday.getDate() + 1)
                 j.reschedule(jobToday)
             })
